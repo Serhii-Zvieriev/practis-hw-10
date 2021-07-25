@@ -65,3 +65,6 @@ let theme = localStorage.getItem('theme');
 //   console.log(count("lllllabababablllllll"));
 //   // {l: 12, a: 4, b: 4}
   
+
+// const res = fetch('https://restcountries.eu/rest/v2/name/ukraine');
+// res.then(response => response.json()).then(resp => console.log(resp));
