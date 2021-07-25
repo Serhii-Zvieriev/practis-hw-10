@@ -11,10 +11,11 @@ import menu from '../data/menu.json';
     DARK: 'dark-theme',
   };
 
-  let state = JSON.parse(localStorage.getItem('theme'));
+//   let state = JSON.parse(localStorage.getItem('theme'));
+let theme = localStorage.getItem('theme');
 
-  bodyRef.classList.add(state?.theme ? state.theme : LIGHT);
-  switchRef.checked = state?.checked;
+  bodyRef.classList.add(theme ? theme : LIGHT);
+  switchRef.checked = theme === DARK;
 
   listRef.insertAdjacentHTML('beforeend', createMenu(menu));
 
@@ -24,10 +25,12 @@ import menu from '../data/menu.json';
 
   function toggleTheme(add, rem) {
     bodyRef.classList.replace(rem, add);
-    const state = {
-      theme: add,
-      checked: add === DARK,
-    };
-    localStorage.setItem('theme', JSON.stringify(state));
+    // const state = {
+    //   theme: add,
+    //   checked: add === DARK,
+    // };
+    // localStorage.setItem('theme', JSON.stringify(state));
+    
+      localStorage.setItem('theme', add);
   }
 // })();
