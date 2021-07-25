@@ -1,7 +1,7 @@
 import createMenu from '../templates/menu.hbs';
 import menu from '../data/menu.json';
 
-(function () {
+// (function () {
   const listRef = document.querySelector('.js-menu');
   const switchRef = document.querySelector('#theme-switch-toggle');
   const bodyRef = document.querySelector('body');
@@ -30,4 +30,4 @@ import menu from '../data/menu.json';
     };
     localStorage.setItem('theme', JSON.stringify(state));
   }
-})();
+// })();
